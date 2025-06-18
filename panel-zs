@@ -2,6 +2,15 @@
 
 echo "Panel Installation Started"
 
+# Step 1: Important 
+
+apt update
+apt install sudo
+apt install systemd
+apt install systemctl
+
+echo "Installed Important Things"
+
 # Step 1: Installing Dependencies
 
 curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh?any=true | sudo bash
