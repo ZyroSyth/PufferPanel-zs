@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Panel Installation Started"
+
+# Step 1: Installing Dependencies
+
+curl -s https://packagecloud.io/install/repositories/pufferpanel/pufferpanel/script.deb.sh?any=true | sudo bash
+sudo apt update
+sudo apt-get install pufferpanel
+
+echo "Dependencies Installed"
+
+# Step 2: Adding An Admin Account
+
+sudo pufferpanel user add
+
+echo "Admin Account Created Successfully"
+
+# Step 3: Starting The Panel
+
+sudo systemctl enable --now pufferpanel
